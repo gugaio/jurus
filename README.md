@@ -1,0 +1,2 @@
+# jurus
+Admin do Jurus
