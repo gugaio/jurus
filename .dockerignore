@@ -1,0 +1,6 @@
+.git
+.dockerignore
+.env
+jurus/node_modules/
+jurus/vendor/bundle/
+jurus/tmp/
