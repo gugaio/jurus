@@ -152,18 +152,6 @@ function InvestmentChat() {
       }
     }
 
-    const getTypeExplanation = () => {
-      switch (asset.type) {
-        case 'fixed':
-          return "Este é um investimento pré-fixado. Você sabe exatamente quanto vai ganhar!"
-        case 'ipca':
-          return "Este investimento protege contra a inflação + dá um bônus extra!"
-        case 'cdi':
-          return "Este investimento acompanha a taxa básica de juros do país!"
-        default:
-          return "Vamos analisar este investimento!"
-      }
-    }
 
     return [
       {

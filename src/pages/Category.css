@@ -78,20 +78,11 @@
   gap: 1rem;
 }
 
-.asset-row-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-  transition: transform 0.2s ease;
-}
-
-.asset-row-link:hover {
-  transform: translateY(-2px);
-}
-
 .asset-row {
   display: grid;
   grid-template-columns: 2fr 4fr 0.8fr;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   gap: 1rem;
   align-items: center;
   padding: 1rem;
@@ -99,6 +90,33 @@
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   border: 1px solid #eee;
+}
+
+.asset-row:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.asset-row.expanded {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-color: #646cff;
+}
+
+.asset-chat-container {
+  margin-top: -1px;
+  border-top: none;
+  animation: expandChat 0.3s ease-out;
+}
+
+@keyframes expandChat {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 500px;
+  }
 }
 
 .asset-info {

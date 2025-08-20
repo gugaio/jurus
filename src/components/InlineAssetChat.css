@@ -1,0 +1,281 @@
+.inline-chat {
+  width: 100%;
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 1px solid #eee;
+}
+
+.inline-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.inline-message {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.inline-message-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  background: #e3f2fd;
+}
+
+.inline-message-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.inline-message-text {
+  padding: 0.75rem 1rem;
+  border-radius: 16px;
+  line-height: 1.4;
+  white-space: pre-line;
+  font-size: 0.9rem;
+  background: #f0f0f0;
+  color: #333;
+  border-bottom-left-radius: 6px;
+}
+
+/* Chart Styles - Inline version */
+.inline-chart-container {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.investment-comparison {
+  text-align: center;
+}
+
+.bar-chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1rem;
+  height: 80px;
+  margin-bottom: 0.75rem;
+}
+
+.bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bar-fill {
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px 6px 0 0;
+  color: white;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+.arrow {
+  font-size: 1.2rem;
+  color: #666;
+  align-self: center;
+  margin-bottom: 0.5rem;
+}
+
+.rate-info {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #34a853;
+}
+
+/* IPCA Chart */
+.ipca-breakdown {
+  text-align: center;
+}
+
+.ipca-parts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.ipca-part, .ipca-total {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.plus, .equals {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #666;
+}
+
+/* CDI Chart */
+.cdi-calculation {
+  text-align: center;
+}
+
+.cdi-formula {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.cdi-rate, .current-cdi, .final-rate {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.cdi-rate {
+  background: #34a853;
+  color: white;
+}
+
+.current-cdi {
+  background: #ff9800;
+  color: white;
+}
+
+.final-rate {
+  background: #4285f4;
+  color: white;
+}
+
+.times {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #666;
+}
+
+/* IPCA Curve Chart - Inline version */
+.ipca-curve {
+  text-align: center;
+}
+
+.curve-chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 80px;
+  margin-bottom: 0.75rem;
+  padding: 0 0.25rem;
+  gap: 0.15rem;
+}
+
+.curve-point {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  gap: 0.2rem;
+}
+
+.curve-bar {
+  width: 100%;
+  max-width: 16px;
+  background: linear-gradient(to top, #ea4335, #ff6b6b);
+  border-radius: 2px 2px 0 0;
+  min-height: 15px;
+  transition: height 0.3s ease;
+}
+
+.curve-value {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+}
+
+.curve-month {
+  font-size: 0.6rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.curve-info {
+  font-size: 0.75rem;
+  color: #666;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .ipca-parts, .cdi-formula {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .bar-chart {
+    height: 60px;
+  }
+  
+  .bar-fill {
+    width: 40px;
+    font-size: 0.65rem;
+  }
+  
+  .curve-chart {
+    height: 60px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .inline-chat {
+    background: #2d2d2d;
+    border-color: #444;
+  }
+  
+  .inline-message-text {
+    background: #3d3d3d;
+    color: #fff;
+  }
+  
+  .inline-message-avatar {
+    background: #4a5568;
+  }
+  
+  .inline-chart-container {
+    background: #3d3d3d;
+    border-color: #555;
+  }
+  
+  .rate-info {
+    color: #4caf50;
+  }
+  
+  .plus, .equals, .times {
+    color: #ccc;
+  }
+  
+  .curve-value {
+    color: #fff;
+  }
+  
+  .curve-month, .curve-info {
+    color: #ccc;
+  }
+}

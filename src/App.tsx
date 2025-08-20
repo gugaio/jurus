@@ -11,7 +11,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/categoria/:categoryId" element={<Category />} />
         <Route path="/chat/:investmentType" element={<InvestmentChat />} />
-        <Route path="/ativo/:assetId" element={<InvestmentChat />} />
       </Routes>
     </Router>
   )

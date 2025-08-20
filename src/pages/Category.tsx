@@ -1,6 +1,8 @@
 import { useParams, Link } from 'react-router-dom'
+import { useState } from 'react'
 import { getAssetsByCategory, getCategoryById, getCdiRate } from '../services/dataService'
 import { Asset } from '../types'
+import InlineAssetChat from '../components/InlineAssetChat'
 import './Category.css'
 
 function Category() {
@@ -8,6 +10,7 @@ function Category() {
   const category = getCategoryById(categoryId || '')
   const assets = getAssetsByCategory(categoryId || '')
   const cdiRate = getCdiRate()
+  const [expandedAsset, setExpandedAsset] = useState<string | null>(null)
   
   if (!category) {
     return (
@@ -196,8 +199,11 @@ function Category() {
             }
 
             return (
-              <Link key={asset.id} to={`/ativo/${asset.id}`} className="asset-row-link">
-                <div className="asset-row">
+              <div key={asset.id}>
+                <div 
+                  className={`asset-row ${expandedAsset === asset.id ? 'expanded' : ''}`}
+                  onClick={() => setExpandedAsset(expandedAsset === asset.id ? null : asset.id)}
+                >
                   <div className="asset-info">
                     <div className="broker">{asset.broker}</div>
                     <div className="issuer">{asset.issuer}</div>
@@ -213,7 +219,13 @@ function Category() {
                     </div>
                   </div>
                 </div>
-              </Link>
+                
+                {expandedAsset === asset.id && (
+                  <div className="asset-chat-container">
+                    <InlineAssetChat asset={asset} />
+                  </div>
+                )}
+              </div>
             )
           })}
         </div>
