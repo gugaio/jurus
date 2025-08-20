@@ -1,0 +1,78 @@
+.home {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.home h1 {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  color: #333;
+}
+
+.categories-table {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.categories-table td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #eee;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #555;
+  transition: background-color 0.2s ease;
+}
+
+.categories-table tr:last-child td {
+  border-bottom: none;
+}
+
+.categories-table tr:hover td {
+  background-color: #f8f9fa;
+}
+
+.category-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+
+.category-link:hover {
+  color: inherit;
+}
+
+@media (prefers-color-scheme: dark) {
+  .home h1 {
+    color: #fff;
+  }
+  
+  .categories-table {
+    border-color: #444;
+    background-color: #1a1a1a;
+  }
+  
+  .categories-table td {
+    color: #ccc;
+    border-bottom-color: #333;
+  }
+  
+  .categories-table tr:hover td {
+    background-color: #2a2a2a;
+  }
+}

@@ -1,0 +1,403 @@
+.category-page {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.back-button {
+  color: #646cff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: rgba(100, 108, 255, 0.1);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #333;
+}
+
+.sections-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.asset-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 30px;
+}
+
+.section-title-link {
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.section-title-link:hover {
+  opacity: 0.7;
+}
+
+.section-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.section-description {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.875rem;
+  color: #888;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.assets-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.asset-row-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.asset-row-link:hover {
+  transform: translateY(-2px);
+}
+
+.asset-row {
+  display: grid;
+  grid-template-columns: 2fr 4fr 0.8fr;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+}
+
+.asset-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.broker {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+}
+
+.issuer {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.rate-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.rate-container-cdi {
+  position: relative;
+  width: 100%;
+}
+
+.rate-container-ipca {
+  position: relative;
+  width: 100%;
+}
+
+.rate-bar {
+  position: relative;
+  width: 100%;
+  height: 32px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.rate-fill {
+  height: 100%;
+  transition: width 0.3s ease;
+  position: absolute;
+  top: 0;
+}
+
+.rate-fill-fixed {
+  background: #4285f4;
+  border-radius: 4px;
+}
+
+.rate-fill-ipca {
+  background: #ea4335;
+  border-radius: 4px 0 0 4px;
+}
+
+.rate-fill-ipca-extra {
+  background: #4285f4;
+  border-radius: 0 4px 4px 0;
+}
+
+.rate-fill-cdi {
+  background: #34a853;
+  border-radius: 4px;
+}
+
+.cdi-mark {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #333;
+  z-index: 2;
+}
+
+.cdi-label {
+  position: absolute;
+  top: -20px;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  color: #666;
+  white-space: nowrap;
+  z-index: 3;
+}
+
+.ipca-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+.extra-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+.rate-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #333;
+  z-index: 1;
+}
+
+.asset-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 120px;
+  overflow: visible;
+}
+
+.timeline-container {
+  width: 100%;
+  overflow: visible;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.timeline-track {
+  position: relative;
+  height: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.timeline-line {
+  width: 100%;
+  height: 4px;
+  background-color: #ecf0f1;
+  border-radius: 2px;
+}
+
+.timeline-marker {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 4px;
+  background-color: #34a853;
+  border-radius: 2px;
+  z-index: 2;
+}
+
+.timeline-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  border-radius: 2px;
+  z-index: 1;
+}
+
+.timeline-fill.has-liquidity {
+  background-color: #34a853;
+}
+
+.timeline-fill.no-liquidity {
+  background-color: #ea4335;
+}
+
+.timeline-text-fixed {
+  font-size: 0.7rem;
+  color: #7f8c8d;
+  font-weight: 500;
+  text-align: left;
+}
+
+
+.liquidity-available {
+  color: #34a853;
+}
+
+.liquidity-locked {
+  color: #ea4335;
+}
+
+.no-assets {
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .asset-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    text-align: center;
+  }
+  
+  .asset-details {
+    align-items: center;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .header h1 {
+    color: #fff;
+  }
+  
+  .section-title {
+    color: #fff;
+  }
+  
+  .section-title-link:hover .section-title {
+    color: #8b92ff;
+  }
+  
+  .section-description {
+    color: #aaa;
+    border-bottom-color: #444;
+  }
+  
+  .back-button {
+    color: #8b92ff;
+  }
+  
+  .back-button:hover {
+    background-color: rgba(139, 146, 255, 0.1);
+  }
+  
+  .asset-row {
+    background: #1a1a1a;
+    border-color: #444;
+  }
+  
+  .broker {
+    color: #fff;
+  }
+  
+  .issuer, .maturity {
+    color: #ccc;
+  }
+  
+  .rate-bar {
+    background-color: #999;
+  }
+  
+  .rate-text {
+    color: #fff;
+  }
+  
+  .cdi-mark {
+    background: #fff;
+  }
+  
+  .cdi-label {
+    color: #ccc;
+  }
+  
+  .timeline-line {
+    background-color: #444;
+  }
+  
+  .timeline-marker {
+    background-color: #4caf50;
+  }
+  
+  .timeline-fill.has-liquidity {
+    background-color: #4caf50;
+  }
+  
+  .timeline-fill.no-liquidity {
+    background-color: #f44336;
+  }
+  
+  .timeline-text-fixed {
+    color: #bbb;
+  }
+  
+  .no-assets {
+    color: #ccc;
+  }
+}
