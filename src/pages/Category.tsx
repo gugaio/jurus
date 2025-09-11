@@ -150,7 +150,7 @@ function Category() {
                           className="rate-fill rate-fill-ipca" 
                           style={{ width: `${ipcaWidth}%` }}
                         >
-                          {ipcaWidth > 15 && <span className="ipca-text">IPCA</span>}
+                          {ipcaWidth > 15 && <span className="ipca-text">Inflação</span>}
                         </div>
                         <div 
                           className="rate-fill rate-fill-ipca-extra" 

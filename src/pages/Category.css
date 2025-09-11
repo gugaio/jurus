@@ -30,7 +30,8 @@
 .header h1 {
   margin: 0;
   font-size: 2rem;
-  color: #333;
+  color: #1e293b;
+  font-weight: 700;
 }
 
 .sections-container {
@@ -60,14 +61,14 @@
 .section-title {
   margin: 0;
   font-size: 1.5rem;
-  font-weight: 600;
-  color: #333;
+  font-weight: 700;
+  color: #1e293b;
 }
 
 .section-description {
   margin: 0 0 0.5rem 0;
   font-size: 0.875rem;
-  color: #888;
+  color: #64748b;
   font-weight: 400;
   line-height: 1.4;
 }
@@ -82,24 +83,25 @@
   display: grid;
   grid-template-columns: 2fr 4fr 0.8fr;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.2s ease;
   gap: 1rem;
   align-items: center;
-  padding: 1rem;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border: 1px solid #eee;
+  padding: 1.25rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f1f5f9;
 }
 
 .asset-row:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  border-color: #e2e8f0;
 }
 
 .asset-row.expanded {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  border-color: #646cff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  border-color: #3b82f6;
 }
 
 .asset-chat-container {
@@ -128,12 +130,12 @@
 .broker {
   font-weight: 600;
   font-size: 1rem;
-  color: #333;
+  color: #1e293b;
 }
 
 .issuer {
   font-size: 0.875rem;
-  color: #666;
+  color: #64748b;
 }
 
 .rate-container {
@@ -156,8 +158,8 @@
   position: relative;
   width: 100%;
   height: 32px;
-  background-color: rgba(255, 255, 255, 0.6);
-  border-radius: 4px;
+  background-color: #f1f5f9;
+  border-radius: 8px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -239,7 +241,7 @@
   transform: translateX(-50%);
   font-weight: 600;
   font-size: 0.875rem;
-  color: #333;
+  color: #efefef;
   z-index: 1;
 }
 
@@ -273,7 +275,7 @@
 .timeline-line {
   width: 100%;
   height: 4px;
-  background-color: #ecf0f1;
+  background-color: #e2e8f0;
   border-radius: 2px;
 }
 
@@ -307,7 +309,7 @@
 
 .timeline-text-fixed {
   font-size: 0.7rem;
-  color: #7f8c8d;
+  color: #64748b;
   font-weight: 500;
   text-align: left;
 }
@@ -340,82 +342,3 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .header h1 {
-    color: #fff;
-  }
-  
-  .section-title {
-    color: #fff;
-  }
-  
-  .section-title-link:hover .section-title {
-    color: #8b92ff;
-  }
-  
-  .section-description {
-    color: #aaa;
-    border-bottom-color: #444;
-  }
-  
-  .back-button {
-    color: #8b92ff;
-  }
-  
-  .back-button:hover {
-    background-color: rgba(139, 146, 255, 0.1);
-  }
-  
-  .asset-row {
-    background: #1a1a1a;
-    border-color: #444;
-  }
-  
-  .broker {
-    color: #fff;
-  }
-  
-  .issuer, .maturity {
-    color: #ccc;
-  }
-  
-  .rate-bar {
-    background-color: #999;
-  }
-  
-  .rate-text {
-    color: #fff;
-  }
-  
-  .cdi-mark {
-    background: #fff;
-  }
-  
-  .cdi-label {
-    color: #ccc;
-  }
-  
-  .timeline-line {
-    background-color: #444;
-  }
-  
-  .timeline-marker {
-    background-color: #4caf50;
-  }
-  
-  .timeline-fill.has-liquidity {
-    background-color: #4caf50;
-  }
-  
-  .timeline-fill.no-liquidity {
-    background-color: #f44336;
-  }
-  
-  .timeline-text-fixed {
-    color: #bbb;
-  }
-  
-  .no-assets {
-    color: #ccc;
-  }
-}
