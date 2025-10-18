@@ -8,7 +8,8 @@ const categories: Category[] = [
   { id: 'cra', name: 'CRA' },
   { id: 'cri', name: 'CRI' },
   { id: 'debentures', name: 'Debêntures' },
-  { id: 'lc', name: 'LC' }
+  { id: 'lc', name: 'LC' },
+  { id: 'guga-insights', name: 'Guga insights' }
 ]
 
 const CDI_RATE = 11.75 // Taxa CDI mock
@@ -585,6 +586,17 @@ const assetsByCategory: Record<string, Asset[]> = {
       rate: 12.7,
       maturity: '2030',
       hasLiquidity: false,
+      type: 'fixed'
+    }
+  ],
+  'guga-insights': [
+    {
+      id: 'guga-1',
+      broker: 'Guga Análises',
+      issuer: 'Insights Especiais',
+      rate: 0,
+      maturity: 'Sempre disponível',
+      hasLiquidity: true,
       type: 'fixed'
     }
   ],

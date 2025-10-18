@@ -243,6 +243,17 @@ function Category() {
       <div className="sections-container">
         {renderSection("Pré-fixados", fixedAssets, "Você sabe exatamente quanto vai ganhar quando investe. É como uma poupança com taxa garantida.")}
         {renderSection("Inflação (IPCA + %)", ipcaAssets, "Protege seu dinheiro da inflação (IPCA) + ganha um extra. Melhor que poupança contra a alta de preços.")}
+
+        <div className="guga-insights-section">
+          <div className="guga-insights-header">
+            <div className="guga-icon">👦</div>
+            <h2 className="guga-insights-title">Guga insights</h2>
+          </div>
+          <p className="guga-insights-description">
+            Dicas especiais e análises personalizadas para seus investimentos
+          </p>
+        </div>
+
         {renderSection("Pós-fixado (% CDI)", cdiAssets, "Ganha uma % da taxa básica do país. Quanto maior a Selic, mais você ganha.")}
         
         {assets.length === 0 && (
